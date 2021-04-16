@@ -69,7 +69,7 @@ header {
 .navegation {
   grid-row: 2/3;
   display: grid;
-  grid-template-rows: 4.75fr 1.25fr 1.5fr 5.25fr;
+  grid-template-rows: 30vh 8vh 6vh 10vh;
 }
 
 .title,
@@ -124,6 +124,11 @@ i {
 }
 
 /* buttons */
+
+.buttons {
+  padding-block: 30px ;
+
+}
 .buttons input {
   font-family: Roboto;
   color: rgb(32, 33, 36);
@@ -143,6 +148,7 @@ i {
 
 /* language */
 .language p {
+  margin-block-start: 20px;
   font-size: 13px;
 }
 
@@ -166,19 +172,21 @@ footer {
 .country {
   padding-inline-start: 30px;
   font-weight: 300;
+  padding-inline: 20px;
   padding-block: 15px;
   border-bottom: 1px solid rgb(218, 220, 224);
 }
 
+.footer-links {
+  padding-inline: 20px;
+}
+
 .left, .right {
-  width: 100%;
   display: flex;
   justify-content: center;
   height: 45px;
   align-items: center;
 }
-
-
 
 .left a, .right a {
   text-decoration: none;
@@ -189,4 +197,25 @@ footer {
 .left a:hover,
 .right a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 665px) {
+  .nav-bar input {
+    width: 580px
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .left a, .right a {
+    padding-inline: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-links {
+    justify-content: space-between;
+  }
 }
